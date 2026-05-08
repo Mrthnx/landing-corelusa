@@ -48,6 +48,24 @@ function render_mobile_nav_link(array $item): void
     echo '<a href="' . h((string) $item['href']) . '" class="rounded-2xl px-3 py-2 text-sm font-medium uppercase tracking-wide transition-colors ' . $classes . '">' . h((string) $item['label']) . '</a>';
 }
 
+function render_brand_signature(string $context = 'nav'): void
+{
+    $logo = '<img src="/images/monitor.svg" alt="CORELUSA PDM Technologies" class="h-full w-full object-contain" loading="eager">';
+
+    if ($context === 'hero') {
+        echo '<div class="mb-8 inline-flex items-center gap-5 rounded-[100px] border border-white/25 bg-white/20 px-6 py-4 backdrop-blur-md php-fly" style="--php-fly-delay:0ms">';
+        echo '<div class="flex h-11 w-11 items-center justify-center">' . $logo . '</div>';
+        echo '<div class="leading-tight"><p class="mb-1 text-[0.6rem] font-mono uppercase tracking-[0.32em] text-[#7eb8f7]">INDUSTRIAL MONITORING PLATFORM</p><p class="text-base font-semibold text-white md:text-lg">Corelusa PDM Technologies</p></div>';
+        echo '</div>';
+        return;
+    }
+
+    echo '<a href="/" class="inline-flex items-center gap-3 rounded-full px-1 py-1 transition hover:opacity-90" aria-label="Go to CORELUSA home">';
+    echo '<span class="flex h-10 w-10 items-center justify-center"><span class="h-8 w-8">' . $logo . '</span></span>';
+    echo '<span class="leading-tight"><span class="block text-xs font-mono uppercase tracking-[0.28em] text-[#0066cc]">CORELUSA</span><span class="hidden text-sm font-semibold text-[#111111] sm:block">PDM Technologies</span></span>';
+    echo '</a>';
+}
+
 function page_start(string $title, string $subtitle = '', ?string $heroImage = null, string $description = 'CORELUSA: predictive maintenance and industrial inspection focused on operational continuity.'): void
 {
     $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
@@ -75,7 +93,8 @@ function page_start(string $title, string $subtitle = '', ?string $heroImage = n
     // Igualamos EXACTO el navbar de Svelte: bg-elevated/85 + border-border-subtle.
     echo '<header class="sticky top-0 z-40 border-b border-[#d9d9d9] bg-white/95 text-[#111111] backdrop-blur-md">';
     echo '<input id="mobile-nav-toggle" type="checkbox" class="hidden">';
-    echo '<div class="mx-auto max-w-[1140px] px-4 sm:px-6"><div class="flex h-14 items-center justify-between lg:justify-center">';
+    echo '<div class="mx-auto max-w-[1140px] px-4 sm:px-6"><div class="flex h-16 items-center justify-between gap-6">';
+    render_brand_signature();
     echo '<nav class="hidden items-center gap-1 lg:flex">';
     foreach (NAV_ITEMS as $item) {
         render_desktop_nav_link($item);

@@ -35,8 +35,9 @@ if ($normalized === '/') {
     echo '<div class="relative z-10 mx-auto max-w-[1140px] px-4 py-20 sm:px-6 md:py-28">';
     echo '<div class="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-end">';
     echo '<div class="max-w-4xl text-white">';
-    echo '<p class="mb-6 font-mono text-xs uppercase tracking-[0.38em] text-[#0066cc] php-fly" style="--php-fly-delay:0ms">INDUSTRIAL MONITORING · PREVENTION · PRECISION</p>';
-    echo '<h1 class="mb-6 text-5xl font-bold leading-none md:text-7xl php-fly" style="--php-fly-delay:0ms">TECHNOLOGY THAT <span class="text-[#0066cc]">PREVENTS FAILURES</span></h1>';
+    render_brand_signature('hero');
+    echo '<p class="mb-6 font-mono text-xs uppercase tracking-[0.38em] text-[#0066cc] php-fly" style="--php-fly-delay:80ms">INDUSTRIAL MONITORING · PREVENTION · PRECISION</p>';
+    echo '<h1 class="mb-6 text-5xl font-bold leading-none md:text-7xl php-fly" style="--php-fly-delay:120ms">TECHNOLOGY THAT <span class="text-[#0066cc]">PREVENTS FAILURES</span></h1>';
     echo '<p class="mb-8 max-w-2xl text-base leading-7 text-slate-200 md:text-lg php-fly" style="--php-fly-delay:180ms">Since 2005, CORELUSA has delivered predictive maintenance and industrial inspection with technical depth, fast response, and commitment to operational continuity.</p>';
     echo '<div class="flex flex-col gap-4 sm:flex-row php-fly" style="--php-fly-delay:320ms"><a href="/request-quote" class="inline-flex items-center justify-center rounded-full border border-[#0066cc] bg-[#0066cc] px-8 py-3 font-semibold text-white transition hover:bg-[#0056ad]">Request a quote</a><a href="/our-services" class="inline-flex items-center justify-center rounded-full border border-[#d9d9d9] bg-white/70 px-8 py-3 font-semibold text-[#111111] transition hover:border-[#0066cc] hover:text-[#0066cc]">Explore services</a></div>';
     echo '</div>';

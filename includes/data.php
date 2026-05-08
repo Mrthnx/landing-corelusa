@@ -20,8 +20,8 @@ const SERVICE_ITEMS = [
 
 // Product pages (ported from landing-monitor v100/v200 content)
 const PRODUCT_ITEMS = [
-    ['label' => 'V100', 'value' => 'v100', 'href' => '/products/v100'],
-    ['label' => 'V200', 'value' => 'v200', 'href' => '/products/v200'],
+    ['label' => 'V100 Remote Sensor', 'value' => 'v100', 'href' => '/products/v100'],
+    ['label' => 'V200 Route Sensor', 'value' => 'v200', 'href' => '/products/v200'],
 ];
 
 const PRODUCT_CONTENT = [
